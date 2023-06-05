@@ -10,6 +10,12 @@ We'll be using Docker Compose to run Wireguard/PiHole/Cloudflared.
 Follow the standard install guides appropriate for your server to install Docker: 
 https://docs.docker.com/engine/install/ubuntu/
 
+## Clone repository
+```bash
+git clone https://github.com/aelmod/wireguard-pihole-cloudflare.git wireguard
+cd wireguard
+```
+
 ## Wireguard Setup
 To ensure a simple setup in the `docker-compose.yml`, you must modify the `SERVERURL` parameter by substituting it with your domain or IP address. Additionally, adjust the `TZ` parameter to specify the timezone you intend to use. 
 I highly recommend acquainting yourself with all the parameters and settings, which can be found in this repository:
@@ -21,8 +27,6 @@ In `docker-compose.yml` adjust the `TZ` parameter to specify the timezone you in
 
 ## Kick off the service:
 ```bash
-git clone https://github.com/aelmod/wireguard-pihole-cloudflare.git wireguard
-cd wireguard
 docker compose up -d
 ```
 
