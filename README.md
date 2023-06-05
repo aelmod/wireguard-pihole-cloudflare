@@ -1,7 +1,7 @@
 # Installing Wireguard, PiHole, Cloudflared VPN
 
 ## Overview
-This repository offers a solution for configuring your personal Wireguard VPN server with PiHole to block malicious and advertising DNS requests, along with a Cloudflared tunnel for DNS over HTTPS.
+This repository offers a solution for configuring your personal Wireguard VPN server with PiHole to block malicious and advertising DNS requests, along with a Cloudflared proxy for DNS over HTTPS.
 
 Inspired by: https://github.com/jbencina/vpn
 
