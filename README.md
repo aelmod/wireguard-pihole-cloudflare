@@ -22,7 +22,7 @@ I highly recommend acquainting yourself with all the parameters and settings, wh
 
 https://github.com/linuxserver/docker-wireguard#parameters
 
-## Pihole / Cloudflared
+## Pihole Setup
 In `docker-compose.yml` adjust the `TZ` parameter to specify the timezone you intend to use.
 
 ## Kick off the service:
