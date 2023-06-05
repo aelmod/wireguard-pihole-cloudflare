@@ -1,0 +1,4 @@
+config/
+etc-dnsmasq.d/
+etc-pihole/
+docker-compose.yml.old

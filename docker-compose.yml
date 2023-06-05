@@ -1,0 +1,71 @@
+version: "3"
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SERVERURL=wireguard.domain.com #optional
+      - SERVERPORT=51820 #optional
+      - PEERS=15 #optional
+      - PEERDNS=auto #optional
+      - INTERNAL_SUBNET=10.13.13.0 #optional
+      - ALLOWEDIPS=0.0.0.0/0 #optional
+      - LOG_CONFS=false #optional
+    volumes:
+      - ~/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+    networks:
+      pihole:
+        ipv4_address: 172.20.0.4
+    dns:
+      - 172.20.0.2
+    depends_on:
+      pihole:
+        condition: service_healthy
+  cloudflared:
+    container_name: cloudflared
+    image: cloudflare/cloudflared:latest
+    command: proxy-dns --port 5053 --address 0.0.0.0
+    restart: unless-stopped
+    networks:
+      pihole:
+        ipv4_address: 172.20.0.3
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    environment:
+      TZ: 'Etc/UTC'
+      DNS1: '172.20.0.3#5053'
+      DNS2: 'no'
+    volumes:
+      - './etc-pihole/:/etc/pihole/'
+      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
+    dns:
+      - 172.20.0.3
+      - 1.1.1.1
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+    networks:
+      pihole:
+        ipv4_address: 172.20.0.2
+    depends_on:
+      - cloudflared
+    healthcheck:
+      test: dig @127.0.0.1 pi.hole
+networks:
+  pihole:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
