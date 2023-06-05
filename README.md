@@ -26,7 +26,7 @@ or without git:
 ```bash
 mkdir wireguard
 cd wireguard
-wget https://raw.githubusercontent.com/aelmod/wireguard-pihole-cloudflare/master/docker-compose.yaml
+wget https://raw.githubusercontent.com/aelmod/wireguard-pihole-cloudflare/master/docker-compose.yml
 # optional
 wget https://raw.githubusercontent.com/aelmod/wireguard-pihole-cloudflare/master/pihole_apple_whitelist.sh
 docker compose up -d
