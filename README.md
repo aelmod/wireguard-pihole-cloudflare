@@ -25,7 +25,7 @@ https://github.com/linuxserver/docker-wireguard#parameters
 ## Pihole Setup
 In `docker-compose.yml` adjust the `TZ` parameter to specify the timezone you intend to use.
 
-## Kick off the service:
+## Kick off the service
 ```bash
 docker compose up -d
 ```
