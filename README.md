@@ -31,7 +31,7 @@ docker compose up -d
 ```
 
 ## Pihole Admin Panel
-To create a password for the PiHole Admin, you need to run the docker-compose interactive shell for the PiHole container using the command `docker-compose exec pihole bash`.
+To create a password for the PiHole Admin, you need to run the docker compose interactive shell for the PiHole container using the command `docker compose exec pihole bash`.
 Once you are in the shell, execute the command `pihole -a -p`. This command will prompt you to enter a new password for the PiHole Admin.
 It is recommended to use a strong password, and you can use a password generator to create one.
 After setting the password, you can access the PiHole Admin Panel by opening a web browser and navigating to:
