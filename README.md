@@ -41,7 +41,7 @@ pihole -a -p
 ```
 This command will prompt you to enter a new password for the PiHole Admin.
 It is recommended to use a strong password, and you can use a password generator to create one.
-After setting the password, you can access the PiHole Admin Panel by opening a web browser and navigating to:
+After setting the password, connect to WireGuard VPN and now you can access the PiHole Admin Panel by opening a web browser and navigating to:
 
 http://172.20.0.2/admin/ 
 
