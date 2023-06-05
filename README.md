@@ -63,9 +63,9 @@ This website is operated by Cloudflare, which provides a DNS resolver that suppo
 We utilize a Docker compose setup to run these services, which involves the creation of three Docker containers.
 These containers serve different purposes:
 
- - One container hosts Cloudflared DNS over HTTPS.
- - Another container hosts PiHole, utilizing a specific Docker image.
- - The third container hosts Wireguard VPN.
+ - One container hosts Cloudflared proxy DNS over HTTPS
+ - Another container hosts PiHole
+ - The third container hosts Wireguard VPN
 
 Each container is assigned a static IP address, and PiHole is configured to utilize the [Cloudflared] DNS resolver.
 
