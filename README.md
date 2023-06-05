@@ -53,7 +53,7 @@ You can also browse this topic (where I found this [script] by [foresthus]) to f
 https://discourse.pi-hole.net/t/commonly-whitelisted-domains/212
 
 ## Verify
-Now connect to Wireguard from your client and enjoy ad free browsing. To verify that DNS over HTTPS (DoH) is working as expected, visit:
+Make sure you are connected to WireGuard VPN. To verify that DNS over HTTPS (DoH) is working as expected, visit:
 
 https://1.1.1.1/help
 
