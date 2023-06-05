@@ -18,8 +18,8 @@ services:
       - ALLOWEDIPS=0.0.0.0/0 #optional
       - LOG_CONFS=false #optional
     volumes:
-      - ~/wireguard/config:/config
-      - /lib/modules:/lib/modules
+      - './config:/config'
+      - '/lib/modules:/lib/modules'
     ports:
       - 51820:51820/udp
     sysctls:
