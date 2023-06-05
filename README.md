@@ -41,7 +41,7 @@ http://172.20.0.2/admin/
 ## Whitelist (optional)
 Before we leave the interactive shell, I recommend running the `pihole_apple_whitelist.sh` script and execute the command it generated from whatever txt file you prefer.
 This command will add Apple services to the white list, so Apple services and devices will work without violations.
-You can also browse this topic (where I found this script) to find solutions to problems that may arise after blocking domains, for example how to whitelist `s.youtube.com` so as not to break your YouTube watch history:
+You can also browse this topic (where I found this [script] by [foresthus]) to find solutions to problems that may arise after blocking domains, for example how to whitelist `s.youtube.com` so as not to break your YouTube watch history:
 
 https://discourse.pi-hole.net/t/commonly-whitelisted-domains/212
 
@@ -63,3 +63,5 @@ These containers serve different purposes:
 Each container is assigned a static IP address, and PiHole is configured to utilize the [Cloudflared] DNS resolver.
 
 [Cloudflared]: <https://github.com/cloudflare/cloudflared>
+[script]: <https://discourse.pi-hole.net/t/commonly-whitelisted-domains/212/147>
+[foresthus]: <https://discourse.pi-hole.net/u/foresthus>
