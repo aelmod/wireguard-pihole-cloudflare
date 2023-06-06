@@ -63,7 +63,7 @@ services:
     depends_on:
       - cloudflared
     healthcheck:
-      test: dig @127.0.0.1 pi.hole
+      test: dig @172.20.0.2 pi.hole
 networks:
   pihole:
     ipam:
