@@ -12,7 +12,7 @@ services:
       - TZ=Etc/UTC
       - SERVERURL=wireguard.domain.com #optional
       - SERVERPORT=51820 #optional
-      - PEERS=1 #optional
+      - PEERS=10 #optional
       - PEERDNS=auto #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
